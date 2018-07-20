@@ -6,11 +6,11 @@ const balance = require('../lib/balance')
 
 describe('balance', function() {
   it('it returns true if the function is balanced', function() {
-    let string = '()';
+    let string = '(())';
     expect(balance(string)).to.eql(true)
   });
   it('it returns false if the function is balanced', function() {
     let unbalanced_string = '(';
-    expect(balance(string)).to.eql(false)
+    expect(balance(unbalanced_string)).to.eql(false)
   })
 })
